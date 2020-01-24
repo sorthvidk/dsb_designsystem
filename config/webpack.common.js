@@ -18,7 +18,7 @@ module.exports = {
    */
   output: {
     path: paths.build,
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].bundle.js',
     publicPath: '/',
   },
 

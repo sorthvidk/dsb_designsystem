@@ -7,6 +7,7 @@ const sbTemplate = path.join(templateFolder, 'story.hbs');
 const sbPagesTemplate = path.join(templateFolder, '/page.hbs');
 const scssTemplate = path.join(templateFolder, '/scss.hbs');
 const readmeTemplate = path.join(templateFolder, '/readme.hbs');
+const jsTemplate = path.join(templateFolder, '/js.hbs');
 
 module.exports = function (plop) {
 	plop.setGenerator('basics', {
@@ -56,6 +57,11 @@ module.exports = function (plop) {
                 type: 'add',
                 path: path.join(pathString + '/{{name}}/_{{name}}.scss'),
                 templateFile: scssTemplate,
+              });
+              actions.push({
+                type: 'add',
+                path: path.join(pathString + '/{{name}}/{{name}}.js'),
+                templateFile: jsTemplate,
               });
             }
             return actions;
