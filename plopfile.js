@@ -1,11 +1,12 @@
 const path = require('path');
 
-const defaultFolder = 'src/components';
+const defaultFolder = 'src';
 const templateFolder = 'plop-templates';
-const jsxTemplate = path.join(templateFolder, 'html.hbs');
+const htmlTemplate = path.join(templateFolder, 'html.hbs');
 const sbTemplate = path.join(templateFolder, 'story.hbs');
 const sbPagesTemplate = path.join(templateFolder, '/page.hbs');
 const scssTemplate = path.join(templateFolder, '/scss.hbs');
+const readmeTemplate = path.join(templateFolder, '/readme.hbs');
 
 module.exports = function (plop) {
 	plop.setGenerator('basics', {
@@ -50,6 +51,11 @@ module.exports = function (plop) {
                 type: 'add',
                 path: path.join(pathString + '/{{name}}/README.md'),
                 templateFile: readmeTemplate,
+              });
+              actions.push({
+                type: 'add',
+                path: path.join(pathString + '/{{name}}/_{{name}}.scss'),
+                templateFile: scssTemplate,
               });
             }
             return actions;
