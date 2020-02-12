@@ -6,7 +6,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 // // import { render } from 'lighterhtml';
 import { render, TemplateResult } from 'lit-html';
 // import { classMap } from 'lit-html/directives/class-map';
-// import { withSFCCHTML } from '../../int_storybook/cartridge/client/default/js/addon-sfcc-html/index';
+import { withHTML } from '@whitespace/storybook-addon-html/html';
 // import '../cartridge/client/default/storybook-preview.scss';
 // import '../cartridge/client/default/storybook-preview.js';
 // import '../../app_magasin/cartridge/client/default/scss/style.scss';
@@ -22,13 +22,13 @@ addDecorator((story) => {
 // addDecorator(withA11y);
 // addDecorator(addReadme);
 addDecorator(withKnobs);
-// addDecorator(withSFCCHTML({
-// 	prettier: {
-// 		printWidth: 160,
-// 		tabWidth: 2,
-// 		useTabs: false,
-// 	},
-// }));
+addDecorator(withHTML({
+	prettier: {
+		printWidth: 160,
+		tabWidth: 2,
+		useTabs: false,
+	},
+}));
 // addParameters({
 // 	options: {
 // 		storySort: (a, b) =>

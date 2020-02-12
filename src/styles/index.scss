@@ -1,14 +1,6 @@
 @import 'settings/variables';
+@import '../components/hero/hero';
+@import '../components/header-1/header-1';
+@import '../components/header-2/header-2';
+@import '../components/spinner/spinner';
 
-
-html {
-  font-size: $root-font-size;
-  font-family: $font-family;
-  max-width: $page-width;
-  margin: 0 auto;
-  text-align: center;
-}
-
-p {
-  font-size: $paragraph-font-size;
-}

@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "storybook": "start-storybook -p 6006 -s static",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s static",
     "plop": "plop"
   },
   "keywords": [
@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.5.5",
     "@storybook/addon-knobs": "^5.3.13",
     "@storybook/html": "^5.3.9",
+    "@whitespace/storybook-addon-html": "^1.2.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",

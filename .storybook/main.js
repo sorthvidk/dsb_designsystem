@@ -4,7 +4,8 @@ const custom = require('../config/webpack.dev');
 module.exports = {
   stories: ['../src/**/*.stories.js'],
   addons: [
-    '@storybook/addon-knobs/register'
+    '@storybook/addon-knobs/register',
+    '@whitespace/storybook-addon-html/register',
   ],
   webpackFinal: (config) => {
     return {

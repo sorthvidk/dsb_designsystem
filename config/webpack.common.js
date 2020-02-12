@@ -1,7 +1,7 @@
 const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 module.exports = {
   /**
@@ -47,20 +47,7 @@ module.exports = {
         ignore: ['*.DS_Store'],
       },
     ]),
-
-    /**
-     * HtmlWebpackPlugin
-     *
-     * Generates an HTML file from a template.
-     */
-    new HtmlWebpackPlugin({
-      title: 'Webpack Boilerplate',
-      favicon: paths.src + '/images/favicon.png',
-      template: paths.src + '/template.html', // template file
-      filename: 'index.html', // output file
-    }),
   ],
-
   /**
    * Module
    *
