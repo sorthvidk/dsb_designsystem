@@ -3,7 +3,7 @@ import SpinnerHTML from './spinner.html.js';
 
 
 export default {
-	title: 'Components/Spinner'
+	title: '2. Components|Spinner'
 };
 
 export const Default = () => SpinnerHTML({

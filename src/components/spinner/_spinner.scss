@@ -8,12 +8,12 @@
     animation: spin linear infinite 10s;
     
     display: inline-block;
-    
-    margin: 25px;
     padding: 25px;
     
     border: 2px solid $grey-1;
     border-radius: 15px;
+
+    font-family: $font-family;
     
     &:hover {
         background-color: $grey-2;
@@ -21,7 +21,7 @@
     
     &.-fancy {
         color: white;
-        background-color: aqua;
-        border-color: aquamarine;
+        background-color: $red;
+        border: none;
     }
 }

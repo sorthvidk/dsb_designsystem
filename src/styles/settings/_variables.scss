@@ -1,4 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../fonts/Roboto-Regular.ttf)
+}
+
+// font
 $root-font-size: 1rem;
 $font-family: 'Roboto', sans-serif;
 $page-width: 800px;
 $paragraph-font-size: 1.6rem;
+
+// colors
+$red: #B41730;
+
+$grey-1: #eee;
+$grey-2: #ccc;

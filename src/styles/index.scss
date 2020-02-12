@@ -1,12 +1,5 @@
 @import 'settings/variables';
 
-@import './../components/spinner/spinner.scss';
-
-@font-face {
-  font-family: 'Roboto';
-  src: url(../fonts/Roboto-Regular.ttf)
-}
-
 
 html {
   font-size: $root-font-size;
