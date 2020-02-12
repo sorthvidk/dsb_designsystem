@@ -1,8 +1,10 @@
+@import '../../styles/essentials';
+
 @keyframes spin {
     to { transform: rotate(360deg) }
 }
 
-custom-spinner {
+.custom-spinner {
     animation: spin linear infinite 10s;
     
     display: inline-block;
@@ -10,10 +12,16 @@ custom-spinner {
     margin: 25px;
     padding: 25px;
     
-    border: 2px solid #eee;
+    border: 2px solid $grey-1;
     border-radius: 15px;
     
     &:hover {
-        background-color: #ccc;
+        background-color: $grey-2;
+    }
+    
+    &.-fancy {
+        color: white;
+        background-color: aqua;
+        border-color: aquamarine;
     }
 }

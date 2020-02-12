@@ -1,1 +1,5 @@
-export { Spinner } from './src/components/spinner'
+import Spinner from './src/components/spinner/spinner.js'
+
+export {
+    Spinner
+}

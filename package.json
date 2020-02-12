@@ -1,5 +1,5 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "dsb-designsystem",
   "version": "1.0.0",
   "description": "Webpack 4 Boilerplate",
   "main": "index.js",
@@ -23,6 +23,7 @@
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@storybook/addon-knobs": "^5.3.13",
     "@storybook/html": "^5.3.9",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",

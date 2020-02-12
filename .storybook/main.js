@@ -1,20 +1,18 @@
 const path = require('path');
+const custom = require('../config/webpack.dev');
 
 module.exports = {
   stories: ['../src/**/*.stories.js'],
-  webpackFinal: async (config, { configType }) => {
-
-    /**
-     * Styles
-     *
-     * Support .scss to be imported and read by Storybook
-     */
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../'),
-    });
-
-    return config;
-  },
+  addons: [
+    '@storybook/addon-knobs/register'
+  ],
+  webpackFinal: (config) => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: custom.module.rules
+      }
+    };
+  }
 };
