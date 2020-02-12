@@ -1,1 +1,1 @@
-<div class="spinner"></div>
+export default () => `<custom-spinner>Spinner</custom-spinner>`

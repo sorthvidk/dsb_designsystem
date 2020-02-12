@@ -1,3 +1,19 @@
-.spinner {
-    display: flex;
+@keyframes spin {
+    to { transform: rotate(360deg) }
+}
+
+custom-spinner {
+    animation: spin linear infinite 10s;
+    
+    display: inline-block;
+    
+    margin: 25px;
+    padding: 25px;
+    
+    border: 2px solid #eee;
+    border-radius: 15px;
+    
+    &:hover {
+        background-color: #ccc;
+    }
 }
