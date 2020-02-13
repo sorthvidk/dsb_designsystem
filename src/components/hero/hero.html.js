@@ -1,10 +1,13 @@
 import { html } from 'lit-html';
+
+import H1 from '../heading-1/heading-1.html';
+import H2 from '../heading-2/heading-2.html';
 import Spinner from '../spinner/spinner.html';
 
 export default ({title, text, modifier, badge, badgeStyle}) => html`
-    <custom-hero class="hero ${ modifier }" style="background: url(images/dsb_hero.jpg);">
-        <header-1 class="header-1">${ title }</header-1>
-        <header-2 class="header-2">${ text }</header-2>
+    <div class="hero ${ modifier || '' }" style="background: url(images/dsb_hero.jpg);">
+        ${ title && H1({ text: title, modifier: '-red' }) }
+        ${ text && H2({ text }) }
         ${ badge && Spinner({text: badge, modifier: badgeStyle}) }
-    </custom-hero>
+    </div>
 `;

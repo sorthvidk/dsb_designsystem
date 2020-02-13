@@ -1,18 +1,22 @@
 @import '../../styles/essentials';
 
-.header-2 {
+.heading-1 {
     font-family: $font-family;
-    font-size: 1rem;
+    font-size: 1.5rem;
 
     @media screen and (min-width: 420px) {
-        font-size: 1.5rem;
-    }
-
-    @media screen and (min-width: 1024px) {
         font-size: 2rem;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1024px) {
         font-size: 3rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 4rem;
+    }
+
+    &.-red {
+        color: $red;
     }
 }

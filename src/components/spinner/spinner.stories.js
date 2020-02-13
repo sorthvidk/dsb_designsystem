@@ -1,15 +1,15 @@
-import Spinner from './spinner.js';
-import SpinnerHTML from './spinner.html.js';
+import component from './spinner';
+import componentHTML from './spinner.html';
 
 
 export default {
 	title: '2. Components|Spinner'
 };
 
-export const Default = () => SpinnerHTML({
+export const Default = () => componentHTML({
 	text: 'SPINNER'
 });
-export const Fancy = () => SpinnerHTML({
+export const Fancy = () => componentHTML({
 	text: 'FANCY SPINNER',
 	modifier: '-fancy'
 });

@@ -1,3 +1,3 @@
 import { html } from 'lit-html';
 
-export default ({text, modifier}) => html`<custom-spinner class="custom-spinner ${ modifier }">${text}</custom-spinner>`;
+export default ({text, modifier}) => html`<div class="spinner ${ modifier }">${text}</div>`;

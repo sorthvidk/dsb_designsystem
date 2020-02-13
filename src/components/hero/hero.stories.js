@@ -1,7 +1,5 @@
 import component from './hero';
-import componentHTML from './hero.html.js';
-
-import { html } from 'lit-html';
+import componentHTML from './hero.html';
 
 export default {
 	title: '2. Components|Hero'

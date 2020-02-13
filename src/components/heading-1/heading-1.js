@@ -1,0 +1,1 @@
+import './_heading-1.scss';
