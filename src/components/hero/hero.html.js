@@ -5,7 +5,7 @@ import H2 from '../heading-2/heading-2.html';
 import Spinner from '../spinner/spinner.html';
 
 export default ({title, text, modifier, badge, badgeStyle}) => html`
-    <div class="hero ${ modifier || '' }" style="background: url(images/dsb_hero.jpg);">
+    <div class="hero ${ modifier || '' }" style="background-image: url(images/dsb_hero.jpg);">
         ${ title && H1({ text: title, modifier: '-red' }) }
         ${ text && H2({ text }) }
         ${ badge && Spinner({text: badge, modifier: badgeStyle}) }

@@ -1,8 +1,10 @@
-import {{pascalCase name}} from './{{name}}';
-
+import component from './{{name}}';
+import componentHTML from './{{name}}.html';
 
 export default {
 	title: '2. {{titleCase type}}|{{titleCase name}}'
 };
 
-export const Default = () => {{pascalCase name}}();
+export const {{pascalCase name}} = () => componentHTML({
+	foo: '{{name}}'
+});

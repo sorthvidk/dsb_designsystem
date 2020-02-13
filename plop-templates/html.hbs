@@ -1,1 +1,3 @@
-<div class="{{name}}"></div>
+import { html } from 'lit-html';
+
+export default ({ foo }) => html`<div class="{{name}}">${ foo }</div>`;
