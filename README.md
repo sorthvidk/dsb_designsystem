@@ -1,14 +1,12 @@
-# 📦 Webpack Boilerplate
+# DSB Designsystem Development
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/david/dev/taniarascia/webpack-boilerplate)
-
-Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, Hot Module Replacement, and development/production optimization.
+Development environment for creating components to the DSB Designsystem
 
 ## Installation
 
 ```
-git clone git@github.com:taniarascia/webpack-boilerplate
-npm i
+git clone https://github.com/sorthvidk/dsb_designsystem
+yarn install
 ```
 
 ## Usage
@@ -16,13 +14,13 @@ npm i
 ### Development server
 
 ```bash
-npm start
+yarn start
 ```
 
 ### Production build
 
 ```bash
-npm run build
+yarn build
 ```
 
 ## Features
@@ -76,7 +74,7 @@ npm run build
 
 ## Author
 
-- [Tania Rascia](https://www.taniarascia.com)
+- [sorthvid](https://www.sorthvid.dk)
 
 ## License
 

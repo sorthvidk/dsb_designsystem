@@ -5,11 +5,24 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   /**
+   * Resolve
+   *
+   * Aliases for more convenient import/exports
+   */
+  resolve: {
+    alias: {
+      C: paths.components,
+      S: paths.styles,
+      I: paths.images
+    }
+  },
+
+  /**
    * Entry
    *
    * The first place Webpack looks to start building the bundle.
    */
-  entry: [paths.src + '/index.js'],
+  entry: [paths.src + "/index.js"],
 
   /**
    * Output
@@ -18,8 +31,8 @@ module.exports = {
    */
   output: {
     path: paths.build,
-    filename: '[name].[hash].bundle.js',
-    publicPath: '/',
+    filename: "[name].[hash].bundle.js",
+    publicPath: "/"
   },
 
   /**
@@ -43,10 +56,10 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: paths.static,
-        to: 'assets',
-        ignore: ['*.DS_Store'],
-      },
-    ]),
+        to: "assets",
+        ignore: ["*.DS_Store"]
+      }
+    ])
   ],
   /**
    * Module
@@ -63,7 +76,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: ["babel-loader", "eslint-loader"]
       },
 
       /**
@@ -74,11 +87,14 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          'style-loader',
-          { loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
-        ],
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { sourceMap: true, importLoaders: 1 }
+          },
+          { loader: "postcss-loader", options: { sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } }
+        ]
       },
 
       /**
@@ -88,11 +104,11 @@ module.exports = {
        */
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name: '[path][name].[ext]',
-          context: 'src', // prevent display of src/ in filename
-        },
+          name: "[path][name].[ext]",
+          context: "src" // prevent display of src/ in filename
+        }
       },
 
       /**
@@ -102,13 +118,13 @@ module.exports = {
        */
       {
         test: /\.(woff(2)?|eot|ttf|otf|)$/,
-        loader: 'url-loader',
+        loader: "url-loader",
         options: {
           limit: 8192,
-          name: '[path][name].[ext]',
-          context: 'src', // prevent display of src/ in filename
-        },
-      },
-    ],
-  },
-}
+          name: "[path][name].[ext]",
+          context: "src" // prevent display of src/ in filename
+        }
+      }
+    ]
+  }
+};

@@ -1,1 +1,3 @@
-import './_spinner.scss';
+import './spinner.scss';
+
+export default 'spinner';

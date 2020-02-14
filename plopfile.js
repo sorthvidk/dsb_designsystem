@@ -55,7 +55,7 @@ module.exports = function (plop) {
               });
               actions.push({
                 type: 'add',
-                path: path.join(pathString + '/{{name}}/_{{name}}.scss'),
+                path: path.join(pathString + '/{{name}}/{{name}}.scss'),
                 templateFile: scssTemplate,
               });
               actions.push({

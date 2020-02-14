@@ -1,9 +1,9 @@
-import "./styles/index.scss";
+import "S/index.scss";
 
-import Spinner from "./components/spinner/spinner";
-import Heading1 from "./components/heading-1/heading-1";
-import Heading2 from "./components/heading-2/heading-2";
-import Hero from "./components/hero/hero";
+import Spinner from "C/spinner/spinner";
+import Heading1 from "C/heading-1/heading-1";
+import Heading2 from "C/heading-2/heading-2";
+import Hero from "C/hero/hero";
 
 export { Spinner, Heading1, Heading2, Hero };
 
@@ -18,7 +18,8 @@ export { Spinner, Heading1, Heading2, Hero };
 //  * 
 //  * note:
 //  * exports has to be avaiable as is,
-//  * without any compiling. can this be done?
+//  * without any compiling. currently there's a async problem,
+//  * where the imported module is not available straight away
 //  */
 
 // // https://webpack.js.org/guides/dependency-management/:

@@ -1,1 +1,3 @@
-import './_heading-2.scss';
+import "./heading-2.scss";
+
+export default "heading-2";
