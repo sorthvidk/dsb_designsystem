@@ -1,8 +1,10 @@
 import component from './heading-1';
 import componentHTML from './heading-1.html';
 
+console.log(component);
+
 export default {
-	title: '2. Components|Typography/Heading/H1'
+	title: 'Components/Typography/Heading/H1'
 };
 
 export const Heading1 = () => componentHTML({

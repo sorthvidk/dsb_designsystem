@@ -1,27 +1,38 @@
-@import '../../styles/essentials';
+@import '~Styles/essentials';
 
 @keyframes spin {
-    to { transform: rotate(360deg) }
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 .spinner {
     animation: spin linear infinite 10s;
-    
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
     display: inline-block;
     padding: 25px;
-    
+
     border: 2px solid $grey-1;
     border-radius: 15px;
 
     font-family: $font-family;
-    
+
     &:hover {
         background-color: $grey-2;
     }
-    
+
     &.-fancy {
         color: white;
         background-color: $red;
         border: none;
+    }
+
+    &.-left {
+        right: auto;
+        left: 30px;
     }
 }

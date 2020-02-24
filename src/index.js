@@ -1,9 +1,9 @@
-import "S/index.scss";
+import "Styles/index.scss";
 
-import Spinner from "C/spinner/spinner";
-import Heading1 from "C/heading-1/heading-1";
-import Heading2 from "C/heading-2/heading-2";
-import Hero from "C/hero/hero";
+import Spinner from "Components/spinner/spinner";
+import Heading1 from "Components/heading-1/heading-1";
+import Heading2 from "Components/heading-2/heading-2";
+import Hero from "Components/hero/hero";
 
 export { Spinner, Heading1, Heading2, Hero };
 
@@ -37,8 +37,8 @@ export { Spinner, Heading1, Heading2, Hero };
 
 // // get all js-files from src folder: (exclude .html.js and .stories.js)
 // const jsFiles = require.context("./components/", true, /^(?!.*(?:html.js|stories.js$)).*\.js$/)
+
 // importAll(jsFiles)
-// // const modules = jsFiles.keys().map(jsFiles)
 // exportAll(jsFiles)
 
 // console.log('// dsb_designsystem: export default ', exportObj)

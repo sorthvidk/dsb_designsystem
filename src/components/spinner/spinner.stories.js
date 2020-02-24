@@ -1,9 +1,10 @@
 import component from './spinner';
 import componentHTML from './spinner.html';
 
+console.log(component)
 
 export default {
-	title: '2. Components|Spinner'
+	title: 'Components/Spinner'
 };
 
 export const Default = () => componentHTML({

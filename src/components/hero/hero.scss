@@ -1,4 +1,4 @@
-@import '../../styles/_essentials.scss';
+@import '~Styles/essentials';
 
 .hero {
     position: relative;
@@ -12,15 +12,10 @@
     color: white;
 
     background-size: cover;
+    background-position: center;
 
     .heading-2 {
         margin: .5em 0;
         max-width: 25em;
-    }
-
-    .spinner {
-        position: absolute;
-        top: 30px;
-        right: 30px;
     }
 }

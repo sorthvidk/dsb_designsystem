@@ -1,8 +1,8 @@
 import { addParameters, addDecorator } from '@storybook/html';
 import { withKnobs } from "@storybook/addon-knobs";
-// import { withA11y } from '@storybook/addon-a11y';
+import { withA11y } from '@storybook/addon-a11y';
 // import { addReadme } from 'storybook-readme/html';
-// import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 // // import { render } from 'lighterhtml';
 import { render, TemplateResult } from 'lit-html';
 // import { classMap } from 'lit-html/directives/class-map';
@@ -19,7 +19,7 @@ addDecorator((story) => {
 	//}
 	//return story();
 });
-// addDecorator(withA11y);
+addDecorator(withA11y);
 // addDecorator(addReadme);
 addDecorator(withKnobs);
 addDecorator(withHTML({
@@ -29,14 +29,17 @@ addDecorator(withHTML({
 		useTabs: false,
 	},
 }));
-// addParameters({
-// 	options: {
-// 		storySort: (a, b) =>
-// 			a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, {
-// 				numeric: true
-// 			}),
-// 	},
-// 	viewport: {
-// 		viewports: INITIAL_VIEWPORTS,
-// 	},
-// });
+addParameters({
+	// options: {
+	// 	storySort: (a, b) =>
+	// 		a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, {
+	// 			numeric: true
+	// 		}),
+	// },
+	options: {
+		showRoots: true,
+	},
+	viewport: {
+		viewports: INITIAL_VIEWPORTS,
+	},
+});

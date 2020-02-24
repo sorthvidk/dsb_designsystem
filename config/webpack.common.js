@@ -1,6 +1,7 @@
 const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const alias = require('./resolve-aliass')
 
 
 module.exports = {
@@ -10,11 +11,7 @@ module.exports = {
    * Aliases for more convenient import/exports
    */
   resolve: {
-    alias: {
-      C: paths.components,
-      S: paths.styles,
-      I: paths.images
-    }
+    alias
   },
 
   /**
