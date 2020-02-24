@@ -1,8 +1,7 @@
-const paths = require('./paths')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const alias = require('./resolve-alias')
-
+const paths = require("./paths");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const alias = require("./aliases");
 
 module.exports = {
   /**
@@ -95,12 +94,19 @@ module.exports = {
       },
 
       /**
+       * SVG
+       *
+       * Inline the SVG's into the code
+       */
+      { test: /\.svg$/, loader: "svg-inline-loader" },
+
+      /**
        * Images
        *
        * Copy image files to build folder.
        */
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]",

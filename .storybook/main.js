@@ -1,6 +1,6 @@
 const path = require('path');
 const custom = require('../config/webpack.dev');
-const alias = require('../config/resolve-alias');
+const aliases = require('../config/aliases');
 
 module.exports = {
   /**
@@ -55,7 +55,7 @@ module.exports = {
          * 
          * Include the global Webpack alias object
          */
-        alias
+        alias: aliases
       },
       module: {
         ...config.module,

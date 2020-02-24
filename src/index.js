@@ -1,26 +1,40 @@
+/**
+ * SCSS
+ *
+ * All styling
+ */
 import "Styles/index.scss";
 
+/**
+ * Import SVG
+ */
+import upArrow from "Svg/up-arrow.svg";
+
+/**
+ * Import Components
+ */
 import Spinner from "Components/spinner/spinner";
 import Heading1 from "Components/heading-1/heading-1";
 import Heading2 from "Components/heading-2/heading-2";
 import Hero from "Components/hero/hero";
 
-export { Spinner, Heading1, Heading2, Hero };
+/**
+ * Export Components
+ *
+ * To be available to outside projects
+ */
+export {
+  // SVG
+  upArrow,
 
+  // Components
+  Spinner,
+  Heading1,
+  Heading2,
+  Hero
+};
 
 // // idea (psuedo code):
-
-// /**
-//  * Import all files matching '.js' pattern.
-//  * 
-//  * To dynamically create import/export,
-//  * without having to manually specify them.
-//  * 
-//  * note:
-//  * exports has to be avaiable as is,
-//  * without any compiling. currently there's a async problem,
-//  * where the imported module is not available straight away
-//  */
 
 // // https://webpack.js.org/guides/dependency-management/:
 
