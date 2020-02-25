@@ -1,7 +1,7 @@
-@import '~Styles/essentials';
+@use './../../styles/essentials';
 
 .heading-2 {
-    font-family: $font-family;
+    font-family: essentials.$font-family;
     font-size: 1rem;
 
     @media screen and (min-width: 420px) {

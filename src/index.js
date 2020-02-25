@@ -3,20 +3,20 @@
  *
  * All styling
  */
-import "Styles/index.scss";
+import "./styles/index.scss";
 
 /**
  * Import SVG
  */
-import upArrow from "Svg/up-arrow.svg";
+import upArrow from "./../static/svg/up-arrow.svg";
 
 /**
  * Import Components
  */
-import Spinner from "Components/spinner/spinner";
-import Heading1 from "Components/heading-1/heading-1";
-import Heading2 from "Components/heading-2/heading-2";
-import Hero from "Components/hero/hero";
+import Spinner from "./components/spinner/spinner";
+import Heading1 from "./components/heading-1/heading-1";
+import Heading2 from "./components/heading-2/heading-2";
+import Hero from "./components/hero/hero";
 
 /**
  * Export Components

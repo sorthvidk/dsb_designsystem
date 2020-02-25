@@ -1,6 +1,6 @@
-@import 'essentials';
-@import '~Components/hero/hero';
-@import '~Components/heading-1/heading-1';
-@import '~Components/heading-2/heading-2';
-@import '~Components/spinner/spinner';
+@use 'essentials';
+@use './components/hero/hero';
+@use './components/heading-1/heading-1';
+@use './components/heading-2/heading-2';
+@use './components/spinner/spinner';
 

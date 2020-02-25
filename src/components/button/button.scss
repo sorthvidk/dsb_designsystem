@@ -1,11 +1,11 @@
-@import '~Styles/essentials';
+@use './../../styles/essentials';
 
 .button {
     display: inline-block;
     padding: 1em 2em;
 
-    font-family: $font-family;
-    background-color: $red;
-    color: $white;
+    font-family: essentials.$font-family;
+    background-color: essentials.$red;
+    color: essentials.$white;
     border-radius: 10px;
 }

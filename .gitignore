@@ -1,7 +1,7 @@
 
 # Project related #
 ###################
-dist
+# dist
 node_modules
 storybook-static
 
