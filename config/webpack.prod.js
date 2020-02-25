@@ -22,29 +22,29 @@ module.exports = merge(common, {
      * Note: style-loader is for development, MiniCssExtractPlugin is for production.
      * They cannot be used together in the same config.
      */
-    new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
-      chunkFilename: '[id].css',
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: 'styles/[name].[contenthash].css',
+    //   chunkFilename: '[id].css',
+    // }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.(scss|css)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
-          },
-          'postcss-loader',
-          'sass-loader',
-        ],
-      },
-    ],
-  },
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(scss|css)$/,
+  //       use: [
+  //         MiniCssExtractPlugin.loader,
+  //         {
+  //           loader: 'css-loader',
+  //           options: {
+  //             importLoaders: 1,
+  //           },
+  //         },
+  //         'postcss-loader',
+  //         'sass-loader',
+  //       ],
+  //     },
+  //   ],
+  // },
 
   /**
    * Optimization
