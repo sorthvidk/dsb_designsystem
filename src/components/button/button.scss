@@ -1,11 +1,11 @@
-@use './../../styles/essentials';
+@use './../../styles/settings' as *;
 
 .button {
     display: inline-block;
     padding: 1em 2em;
 
-    font-family: essentials.$font-family;
-    background-color: essentials.$red;
-    color: essentials.$white;
+    font-family: $font-sans-serif;
+    background-color: $color-red;
+    color: $color-white;
     border-radius: 10px;
 }

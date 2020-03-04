@@ -1,7 +1,7 @@
-@use './../../styles/essentials';
+@use './../../styles/settings' as *;
 
 .heading-1 {
-    font-family: essentials.$font-family;
+    font-family: $font-sans-serif;
     font-size: 1.5rem;
 
     @media screen and (min-width: 420px) {
@@ -17,6 +17,6 @@
     }
 
     &.-red {
-        color: essentials.$red;
+        color: $color-red;
     }
 }

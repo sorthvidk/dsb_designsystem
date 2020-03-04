@@ -5,6 +5,8 @@ const paths = require("./paths");
  * 
  * Globally available alias object,
  * shared with both Storybook and projects Webpack
+ * 
+ * note: need to build files to resolve paths importing files
  */
 module.exports = {
   Components: paths.components,
