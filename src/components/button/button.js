@@ -1,3 +1,3 @@
 import './button.scss';
 
-export default 'button'
+export default () => 'button'

@@ -8,7 +8,7 @@ import "./styles/index.scss";
 /**
  * Import SVG
  */
-import {default as upArrow} from "./../static/svg/up-arrow.svg";
+export {default as upArrow} from "./../static/svg/up-arrow.svg";
 
 /**
  * Import Components
@@ -23,16 +23,16 @@ export { default as Hero } from "./components/hero/hero";
  *
  * To be available to outside projects
  */
-export {
-  // SVG
-  upArrow,
+// export {
+//   // SVG
+//   upArrow,
 
-  // Components
-  Spinner,
-  Heading1,
-  Heading2,
-  Hero
-};
+//   // Components
+//   Spinner,
+//   Heading1,
+//   Heading2,
+//   Hero
+// };
 
 // // idea (psuedo code):
 

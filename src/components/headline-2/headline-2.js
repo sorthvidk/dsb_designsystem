@@ -1,3 +1,3 @@
 import "./headline-2.scss";
 
-export default "headline-2";
+export default () => "headline-2";
