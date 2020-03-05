@@ -10,5 +10,17 @@ export default {
 
 export const Default = () => componentHTML({
 	icon,
-	text: 'Fix me'
+	text: 'Hent køreplan'
+});
+
+export const Blue = () => componentHTML({
+	modifier: '-blue',
+	icon,
+	text: 'Hent køreplan'
+});
+
+export const Ghost = () => componentHTML({
+	modifier: '-ghost',
+	icon,
+	text: 'Hent køreplan'
 });

@@ -1,11 +1,32 @@
 @use './../../styles/settings' as *;
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 1em 2em;
 
     font-family: $font-sans-serif;
+    white-space: nowrap;
+    
     background-color: $color-red;
     color: $color-white;
-    border-radius: 10px;
+    border-radius: $box-rounded;
+    
+    cursor: pointer;
+    
+    svg {
+        height: 1.2em;
+        margin-right: .5em;
+        margin-left: -.5em;
+        fill: currentColor;
+    }
+    
+    &.-blue {
+        background-color: $color-blue;
+    }
+    
+    &.-ghost {
+        background-color: transparent;
+        border: $box-border-width solid currentColor;
+    }
 }

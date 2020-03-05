@@ -1,6 +1,8 @@
 @forward 'settings';
+
+@forward './../components/button/button';
+@forward './../components/headline-1/headline-1';
+@forward './../components/headline-2/headline-2';
 @forward './../components/hero/hero';
-@forward './../components/heading-1/heading-1';
-@forward './../components/heading-2/heading-2';
 @forward './../components/spinner/spinner';
 

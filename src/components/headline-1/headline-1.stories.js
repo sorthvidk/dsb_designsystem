@@ -1,10 +1,10 @@
-import component from './heading-1';
-import componentHTML from './heading-1.html';
+import component from './headline-1';
+import componentHTML from './headline-1.html';
 
 console.log(component);
 
 export default {
-	title: 'Components/Typography/Heading-1'
+	title: 'Components/Typography/Headline-1'
 };
 
 export const Default = () => componentHTML({

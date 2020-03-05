@@ -14,8 +14,8 @@ import upArrow from "./../static/svg/up-arrow.svg";
  * Import Components
  */
 import Spinner from "./components/spinner/spinner";
-import Heading1 from "./components/heading-1/heading-1";
-import Heading2 from "./components/heading-2/heading-2";
+import Heading1 from "./components/headline-1/headline-1";
+import Heading2 from "./components/headline-2/headline-2";
 import Hero from "./components/hero/hero";
 
 /**
