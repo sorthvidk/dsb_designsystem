@@ -35,6 +35,8 @@ module.exports = merge(common, {
      *
      * Output an ESM library from your bundle.
      * Adds export statements to the end of the bundle for the exported members.
+     *
+     * note: output code is not tree shakable
      */
     new EsmWebpackPlugin()
   ],
@@ -43,7 +45,12 @@ module.exports = merge(common, {
       {
         test: /\.(scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true
+            }
+          },
           {
             loader: "css-loader",
             options: {
@@ -63,22 +70,25 @@ module.exports = merge(common, {
    * Production minimizing of JavaSvript and CSS assets.
    */
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
+    // note: this makes the esm-plugin fail
     // Once your build outputs multiple chunks, this option will ensure they share the webpack runtime
     // instead of having their own. This also helps with long-term caching, since the chunks will only
     // change when actual code changes, not the webpack runtime.
-    runtimeChunk: "single",
+    // runtimeChunk: "single",
+    // Don't change hashes on output files, if the content on the file hasn't changed.
+    // moduleIds: 'hashed',
     // This breaks apart commonly shared deps (react, semantic ui, etc) into one shared bundle. React, etc
     // won't change as often as the app code, so this chunk can be cached separately from app code.
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/](react|react-dom|lodash)[\\/]/,
-          name: "vendors",
-          chunks: "all"
-        }
-      }
-    }
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/](react|react-dom|lodash)[\\/]/,
+    //       name: "vendors",
+    //       chunks: "all"
+    //     }
+    //   }
+    // }
   },
   performance: {
     hints: false,
