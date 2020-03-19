@@ -1,0 +1,6 @@
+@use './../../../scss' as *;
+
+.trumpet {
+    @include font-family(display);
+    @include font-typeset(trumpet);
+}

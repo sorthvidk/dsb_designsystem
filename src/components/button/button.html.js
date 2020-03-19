@@ -3,7 +3,7 @@ import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 
 
 export default ({ modifier, text, icon }) => html`
-  <div class="button ${modifier || ''}">
-    ${unsafeHTML(icon)} ${text}
-  </div>
+  <button class="button ${modifier || ''}">
+    ${icon && unsafeHTML(icon)} ${text}
+  </button>
 `;

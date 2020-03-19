@@ -1,0 +1,13 @@
+@use './../../../scss' as *;
+
+.headline-1 {
+    @include font-family(display);
+    @include font-typeset(headline-1);
+    
+    max-width: 35rem;
+
+    // pseudo
+    &.-red {
+        color: $color-red;
+    }
+}

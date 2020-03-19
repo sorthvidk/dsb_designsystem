@@ -1,0 +1,8 @@
+@use './../../../scss' as *;
+
+.component-p {
+    @include font-family(sans-serif);
+    @include font-typeset(component-paragraph);
+
+    max-width: 35em;
+}

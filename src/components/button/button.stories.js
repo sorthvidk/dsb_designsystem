@@ -1,14 +1,16 @@
-import component from "./button";
+import "./button.scss";
 import componentHTML from "./button.html";
 import icon from "Svg/up-arrow.svg";
-
-console.log(component)
 
 export default {
   title: "Components/Button"
 };
 
 export const Default = () => componentHTML({
+	text: 'Hent køreplan'
+});
+
+export const Icon = () => componentHTML({
 	icon,
 	text: 'Hent køreplan'
 });

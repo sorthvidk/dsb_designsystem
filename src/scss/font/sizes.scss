@@ -1,0 +1,336 @@
+@use 'sass:map';
+
+@use '../media-query' as *;
+
+/**
+ * font-sizes [private]
+ *
+ * Definitions of the responsive font sizes
+ */
+$-font-sizes: (
+    h1: (
+        base-font-size: default,
+        default: (
+            font-size: 32px,
+            line-height: 42px
+        ),
+        s: (
+            font-size: 38px,
+            line-height: 48px
+        ),
+        l: (
+            font-size: 50px,
+            line-height: 62px
+        ),
+        xl: (
+            font-size: 65px,
+            line-height: 80px
+        )
+    ),
+    h2: (
+        base-font-size: default,
+        default: (
+            font-size: 32px,
+            line-height: 42px
+        ),
+        l: (
+            font-size: 45px,
+            line-height: 58px
+        ),
+        xl: (
+            font-size: 55px,
+            line-height: 70px
+        )
+    ),
+    h3: (
+        base-font-size: default,
+        default: (
+            font-size: 22px,
+            line-height: 32px
+        ),
+        s: (
+            font-size: 24px,
+            line-height: 34px
+        ),
+        l: (
+            font-size: 32px,
+            line-height: 42px
+        ),
+        xl: (
+            font-size: 36px,
+            line-height: 48px
+        )
+    ),
+    h4: (
+        base-font-size: default,
+        default: (
+            font-size: 22px,
+            line-height: 32px
+        ),
+        s: (
+            font-size: 20px,
+            line-height: 30px
+        ),
+        m: (
+            font-size: 22px,
+            line-height: 32px
+        ),
+        l: (
+            font-size: 28px,
+            line-height: 38px
+        ),
+        xl: (
+            font-size: 36px,
+            line-height: 48px
+        )
+    ),
+    h5: (
+        base-font-size: default,
+        default: (
+            font-size: 22px,
+            line-height: 32px
+        ),
+        s: (
+            font-size: 20px,
+            line-height: 30px
+        ),
+        m: (
+            font-size: 22px,
+            line-height: 32px
+        ),
+        l: (
+            font-size: 24px,
+            line-height: 34px
+        ),
+        xl: (
+            font-size: 32px,
+            line-height: 44px
+        )
+    ),
+    hero-p: (
+        base-font-size: default,
+        default: (
+            font-size: 18px,
+            line-height: 30px
+        ),
+        l: (
+            font-size: 22px,
+            line-height: 34px
+        ),
+        xl: (
+            font-size: 26px,
+            line-height: 40px
+        )
+    ),
+    component-p: (
+        base-font-size: default,
+        default: (
+            font-size: 16px,
+            line-height: 28px
+        ),
+        l: (
+            font-size: 18px,
+            line-height: 30px
+        ),
+        xl: (
+            font-size: 22px,
+            line-height: 36px
+        )
+    ),
+    standard-p: (
+        base-font-size: default,
+        default: (
+            font-size: 16px,
+            line-height: 28px
+        ),
+        xl: (
+            font-size: 18px,
+            line-height: 30px
+        )
+    ),
+    trumpet: (
+        base-font-size: default,
+        default: (
+            font-size: 18px,
+            line-height: 28px
+        ),
+        l: (
+            font-size: 20px,
+            line-height: 30px
+        ),
+        xl: (
+            font-size: 24px,
+            line-height: 34px 
+        )
+    )
+);
+
+/**
+ * font-types [private]
+ *
+ * All the defined fonts, with name, weight, letter spacing and so on.
+ * This is what's globally available in the project.
+ */
+$-font-types: (
+    headline-1: (
+        font-size: h1,
+        font-weight: bold
+    ),
+    headline-2: (
+        font-size: h2,
+        font-weight: bold
+    ),
+    headline-3: (
+        font-size: h3,
+        font-weight: bold
+    ),
+    headline-4: (
+        font-size: h4,
+        font-weight: bold
+    ),
+    headline-5: (
+        font-size: h5
+    ),
+    hero-paragraph: (
+        font-size: hero-p
+    ),
+    component-paragraph: (
+        font-size: component-p
+    ),
+    standard-paragraph: (
+        font-size: standard-p
+    ),
+    trumpet: (
+        font-size: trumpet
+    )
+);
+
+
+
+@function -getFontSize($value) {
+    $result: '';
+
+    @if(type-of($value) == number) {
+        @if(unit($value) == "" or unit($value) == "px") {
+            $result: $value;
+        }
+
+        @else {
+            $result: $value;
+        }
+    }
+
+    @return $result;
+}
+
+@function -getLetterSpace($value, $font-size) {
+    $result: null;
+
+    @if(type-of($value) == number and type-of($font-size) == number) {
+        @if(unit($value) == "px" and unit($font-size) == "px") {
+            $result: $value / $font-size * 1em;
+        }
+
+        @if(unit($value) == "em" or unit($value) == "rem") {
+            $result: $value;
+        }
+
+        @if(unit($value) == "") {
+            $result: $value * 1em;
+        }
+    }
+
+    @return $result;
+}
+
+@function -getLineHeight($line-height, $font-size) {
+    $result: null;
+
+    @if(type-of($line-height) == number and type-of($font-size) == number) {
+        @if(unit($line-height) == "px" and unit($font-size) == "px") {
+            $result: $line-height / $font-size;
+        }
+
+        @if(unit($line-height) == "px" and unit($font-size) == "vw" or unit($font-size) == "vh") {
+            $result: $line-height / $base-font-size;
+        }
+
+        @if(unit($line-height) == "") {
+            $result: $line-height;
+        }
+    }
+
+    @return $result;
+}
+
+/**
+ * Typeset
+ *
+ * Globally exposes all the text-styles to the project
+ * ex. @include font-typeset(headline-1);
+ */
+@mixin typeset($typestyle: standard-paragraph) {
+    $type: map.get($-font-types, $typestyle);
+    $responsive: false;
+    $font-size: null;
+    $fontMap: null;
+    $base-fs: null;
+    $allowed-rules: (
+        font-weight: true,
+        font-style: true,
+        text-transform: true,
+        color: true
+    ) !default;
+    
+    // if default is there it's responsive
+    @if($type) {
+        @if(map.get(map.get($-font-sizes, map.get($type, font-size)), default)) {
+            $responsive: true;
+            $fontMap: map.get(map.get($-font-sizes, map.get($type, font-size)), default);
+            $base-fs-map: map.get(map.get($-font-sizes, map.get($type, font-size)), base-font-size);
+            $base-fs: map.get(map.get(map.get($-font-sizes, map.get($type, font-size)), $base-fs-map), font-size);
+        }
+
+        @else {
+            $fontMap: map.get($-font-sizes, map.get($type, font-size));
+            $base-fs: map.get(map.get($-font-sizes, map.get($type, font-size)), font-size);
+        }
+
+        font-size: -getFontSize(map.get($fontMap, font-size));
+
+        @if map.has-key($fontMap, line-height) {
+            line-height: -getLineHeight(map.get($fontMap, line-height), $base-fs);
+        }
+
+        @if map.has-key($type, letter-spacing) {
+            letter-spacing: -getLetterSpace(map.get($type, letter-spacing), $base-fs);
+        }
+
+        @each $rule, $val in $type {
+            @if map.has-key($allowed-rules, $rule) {
+                #{$rule}: #{$val};
+            }
+        }
+    }
+
+    
+    @else {
+        @warn 'You have entered a typestyle: `#{$typestyle}`. It looks like it doesn\'t exist. Please check your $type-styles map';
+    }
+    
+    
+    @if($responsive) {
+        
+        @each $break-point, $map in map.get($-font-sizes, map.get($type, font-size)) {
+            @if($break-point != default and $break-point != base-font-size) {
+                @include mq($from: #{$break-point}) {
+                    font-size: -getFontSize(map.get($map, font-size));
+
+                    @if map.has-key($map, line-height) {
+                        line-height: -getLineHeight(map.get($map, line-height), map.get($map, font-size));
+                    }
+                }
+            }
+        }
+    }
+}

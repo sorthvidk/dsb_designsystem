@@ -1,0 +1,8 @@
+@use './../../../scss' as *;
+
+.standard-p {
+    @include font-family(sans-serif);
+    @include font-typeset(standard-paragraph);
+
+    max-width: 35em;
+}

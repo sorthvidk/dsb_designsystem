@@ -88,7 +88,13 @@ module.exports = {
             loader: "css-loader",
             options: { sourceMap: true, importLoaders: 1 }
           },
-          { loader: "postcss-loader", options: { sourceMap: true } },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              plugins: [require("postcss-pxtorem")]
+            }
+          },
           {
             loader: "sass-loader",
             options: {
@@ -129,7 +135,7 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf|)$/,
         loader: "url-loader",
         options: {
-          limit: 8192,
+          limit: 10000,
           name: "[path][name].[ext]",
           context: "src" // prevent display of src/ in filename
         }

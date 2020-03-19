@@ -1,12 +1,16 @@
 import { html } from "lit-html";
 
-import H1 from "../headline-1/headline-1.html";
-import H2 from "../headline-2/headline-2.html";
-import Spinner from "../spinner/spinner.html";
+import Headline from "../typography/headline-1/headline-1.html";
+import Text from "../typography/hero-p/hero-p.html";
+import Button from "../button/button.html";
 
-export default ({ title, text, image, modifier, badge, badgeStyle }) => html`
-  <div class="hero ${modifier || ""}" style="background-image: url(${image});">
-    ${title && H1({ text: title, modifier: "-red" })} ${text && H2({ text })}
-    ${badge && Spinner({ text: badge, modifier: badgeStyle })}
+export default ({ modifier, headline, copy, button, image }) => html`
+  <div class="hero ${modifier}">
+    <img class="hero__image" src="${image}" alt="lorem ipsum" />
+    <div class="hero__content">
+      ${headline && Headline({ text: headline })}
+      ${copy && Text({ text: copy })}
+      ${button && Button({ text: button.text, modifier: button.modifier })}
+    </div>
   </div>
 `;

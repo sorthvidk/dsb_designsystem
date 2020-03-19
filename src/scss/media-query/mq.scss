@@ -1,0 +1,11 @@
+/**
+ * Import and setup mq-mixin,
+ * with the project's breakpoints
+ */
+@use 'breakpoints' as *;
+@use '../../../node_modules/sass-mq/mq' as * with ($mq-breakpoints: $dsb-breakpoints);
+
+/**
+ * Export configured mq-mixin
+ */
+@forward '../../../node_modules/sass-mq/mq';

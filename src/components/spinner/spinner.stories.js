@@ -1,7 +1,5 @@
-import component from './spinner';
+import './spinner.scss';
 import componentHTML from './spinner.html';
-
-console.log(component)
 
 export default {
 	title: 'Components/Spinner'

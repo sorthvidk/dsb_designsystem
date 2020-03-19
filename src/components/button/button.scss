@@ -1,18 +1,29 @@
-@use './../../styles/settings' as *;
+@use './../../scss' as *;
+
+$padding-v: 16px;
+$padding-h: 56px;
 
 .button {
+    @include font-family(display);
+
     display: inline-flex;
     align-items: center;
-    padding: 1em 2em;
-
-    font-family: $font-sans-serif;
+    
+    font-size: 18px;
     white-space: nowrap;
     
     background-color: $color-red;
     color: $color-white;
-    border-radius: $box-rounded;
     
+    padding: $padding-v $padding-h;
+    border: none;
+    border-radius: $box-rounded;
+
     cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
     
     svg {
         height: 1.2em;
@@ -28,5 +39,6 @@
     &.-ghost {
         background-color: transparent;
         border: $box-border-width solid currentColor;
+        padding: #{$padding-v - $box-border-width} #{$padding-h - $box-border-width};
     }
 }

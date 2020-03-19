@@ -1,0 +1,8 @@
+@use './../../../scss' as *;
+
+.hero-p {
+    @include font-family(sans-serif);
+    @include font-typeset(hero-paragraph);
+
+    max-width: 35em;
+}

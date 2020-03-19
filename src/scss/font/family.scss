@@ -1,0 +1,37 @@
+@use 'face' as *;
+
+/**
+ * Variables [private]
+ */
+$-display: 'Via Office', sans-serif;
+$-sans-serif: 'Helvetica Neue', sans-serif;
+
+/**
+ * Map [private]
+ */
+$-typefaces: (
+    display: $-display,
+    sans-serif: $-sans-serif
+);
+
+/**
+ * Family
+ *
+ * Globally exposes the $-typefaces-map above
+ * ex. @include font-family(sans-serif);
+ */
+@mixin family($face: sans-serif) {
+    $type: map-get($-typefaces, $face);
+
+    @if(type-of($type)==map) {
+        font-family: map-get($type, font-family);
+
+        @if map-has-key($type, color) {
+            color: map-get($type, color);
+        }
+    }
+
+    @if(type-of($type)==list) {
+        font-family: $type;
+    }
+}

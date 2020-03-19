@@ -1,4 +1,4 @@
-@use './../../styles/settings' as *;
+@use './../../scss' as *;
 
 @keyframes spin {
     to {
@@ -7,6 +7,8 @@
 }
 
 .spinner {
+    @include font-family(sans-serif);
+
     animation: spin linear infinite 10s;
 
     position: absolute;
@@ -18,8 +20,6 @@
 
     border: 2px solid $color-grey-1;
     border-radius: 15px;
-
-    font-family: $font-sans-serif;
 
     &:hover {
         background-color: $color-grey-2;

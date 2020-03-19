@@ -1,0 +1,8 @@
+/**
+ * scss/index
+ *
+ * Funnel for forwarding the non-component sass to the components
+ */
+@forward 'settings';
+@forward 'media-query';
+@forward 'font' as font-*;

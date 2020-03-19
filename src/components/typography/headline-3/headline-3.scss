@@ -1,0 +1,6 @@
+@use './../../../scss' as *;
+
+.headline-3 {
+    @include font-family(display);
+    @include font-typeset(headline-3);
+}

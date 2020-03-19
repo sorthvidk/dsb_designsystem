@@ -1,0 +1,8 @@
+@use './../../../scss' as *;
+
+.headline-2 {
+    @include font-family(display);
+    @include font-typeset(headline-2);
+
+    max-width: 50rem;
+}

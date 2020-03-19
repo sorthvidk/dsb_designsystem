@@ -7,10 +7,9 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { render, TemplateResult } from 'lit-html';
 // import { classMap } from 'lit-html/directives/class-map';
 import { withHTML } from '@whitespace/storybook-addon-html/html';
-// import '../cartridge/client/default/storybook-preview.scss';
-// import '../cartridge/client/default/storybook-preview.js';
-// import '../../app_magasin/cartridge/client/default/scss/style.scss';
-// import '../../app_magasin/cartridge/client/default/js/components';
+
+import './../src/scss/index.scss';
+
 addDecorator((story) => {
 	//if (component instanceof TemplateResult) {
 	const el = document.createElement('div'); // this element probably can br reused.
