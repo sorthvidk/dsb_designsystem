@@ -1,6 +1,6 @@
 import { text } from "@storybook/addon-knobs";
 
-import "./hero.scss";
+// import "./hero.scss";
 import componentHTML from "./hero.html";
 import image from "Images/dsb_hero.jpg";
 

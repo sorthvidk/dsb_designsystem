@@ -1,17 +1,24 @@
 /**
  * index
  *
- * The file sent to the compiler
- */
+ * The file sent to the compiler, and storybook.
+*/
+
+/**
+ * Vendor
+*/
 @forward '../node_modules/normalize.css/normalize';
+
+/**
+ * Settings
+*/
+@forward 'scss/font/face';
 @forward 'scss';
 
+/**
+ * Components
+*/
 @forward './components/button/button';
-@forward './components/typography/headline-1/headline-1';
-@forward './components/typography/headline-2/headline-2';
-@forward './components/typography/headline-3/headline-3';
-@forward './components/typography/headline-4/headline-4';
-@forward './components/typography/headline-5/headline-5';
 @forward './components/hero/hero';
 @forward './components/spinner/spinner';
-
+@forward './components/typography/typography';

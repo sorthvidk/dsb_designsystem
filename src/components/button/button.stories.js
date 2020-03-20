@@ -1,4 +1,4 @@
-import "./button.scss";
+// import "./button.scss";
 import componentHTML from "./button.html";
 import icon from "Svg/up-arrow.svg";
 

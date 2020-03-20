@@ -1,4 +1,4 @@
-# header-2
+# typography
 
 # h1 Heading
 ## h2 Heading

@@ -8,7 +8,7 @@ import { render, TemplateResult } from 'lit-html';
 // import { classMap } from 'lit-html/directives/class-map';
 import { withHTML } from '@whitespace/storybook-addon-html/html';
 
-import './../src/scss/index.scss';
+import './../src/index.scss';
 
 addDecorator((story) => {
 	//if (component instanceof TemplateResult) {

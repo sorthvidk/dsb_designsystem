@@ -3,7 +3,7 @@
  * with the project's breakpoints
  */
 @use 'breakpoints' as *;
-@use '../../../node_modules/sass-mq/mq' as * with ($mq-breakpoints: $dsb-breakpoints);
+@use '../../../node_modules/sass-mq/mq' with ($mq-breakpoints: $dsb-breakpoints);
 
 /**
  * Export configured mq-mixin

@@ -1,4 +1,4 @@
-import './spinner.scss';
+// import './spinner.scss';
 import componentHTML from './spinner.html';
 
 export default {

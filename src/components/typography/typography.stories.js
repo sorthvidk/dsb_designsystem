@@ -3,15 +3,15 @@ import { html } from "lit-html";
 /**
  * Style
  */
-import "./headline-1/headline-1.scss";
-import "./headline-2/headline-2.scss";
-import "./headline-3/headline-3.scss";
-import "./headline-4/headline-4.scss";
-import "./headline-5/headline-5.scss";
-import "./hero-p/hero-p.scss";
-import "./component-p/component-p.scss";
-import "./standard-p/standard-p.scss";
-import "./trumpet/trumpet.scss";
+// import "./headline-1/headline-1.scss";
+// import "./headline-2/headline-2.scss";
+// import "./headline-3/headline-3.scss";
+// import "./headline-4/headline-4.scss";
+// import "./headline-5/headline-5.scss";
+// import "./hero-p/hero-p.scss";
+// import "./component-p/component-p.scss";
+// import "./standard-p/standard-p.scss";
+// import "./trumpet/trumpet.scss";
 
 /**
  * Markup

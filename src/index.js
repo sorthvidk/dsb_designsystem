@@ -1,7 +1,7 @@
 /**
  * SCSS
  *
- * All styling
+ * All styling sent to webpack
  */
 import "./index.scss";
 
