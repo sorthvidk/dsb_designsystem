@@ -1,0 +1,18 @@
+@use './../media-query'as *;
+@use './../grid'as *;
+@use 'widths' as *;
+
+/**
+ * Horizontal
+ *
+ * Adds n amount of columns as either margin or padding
+ */
+@mixin horizontal($prop, $cols) {
+    #{$prop}-left: 100vw / $col-count * $cols;
+    #{$prop}-right: 100vw / $col-count * $cols;
+
+    @include mq($from: $page) {
+        #{$prop}-left: $page / $col-count * $cols;
+        #{$prop}-right: $page / $col-count * $cols;
+    }
+}

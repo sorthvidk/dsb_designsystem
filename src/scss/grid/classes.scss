@@ -1,0 +1,29 @@
+@use 'settings'as *;
+@use 'grid'as *;
+@use '../media-query'as *;
+
+// basic columns
+@for $i from 1 through $col-count {
+    .col-#{$i} {
+        @include width($cols: $i);
+    }
+}
+
+// breakpoint specific columns
+@each $breakpoint, $width in $dsb-breakpoints {
+    @include mq($from: $breakpoint) {
+        @for $i from 1 through $col-count {
+            // ex: .col-s-12
+            .col-#{$breakpoint}-#{$i} {
+                @include width($cols: $i)
+            }
+        }
+    }
+}
+
+// basic offset
+@for $i from 1 through $col-count {
+    .offset-#{$i} {
+        @include offset($cols: $i);
+    }
+}

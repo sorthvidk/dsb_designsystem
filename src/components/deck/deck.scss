@@ -1,0 +1,48 @@
+@use './../../scss'as *;
+
+.deck {
+    width: 100%;
+
+    &__inner {
+        max-width: $page;
+        margin: 0 auto;
+    }
+    
+    .w {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &.-one {
+            @include horizontal($prop: margin, $cols: 1);
+            width: cols(22);
+        }
+
+        &.-two {
+            @include horizontal($prop: margin, $cols: 2);
+            width: cols(20);
+        }
+    }
+
+    &.-red {
+        background-color: $color-red;
+    }
+
+    &.-blue {
+        background-color: $color-blue;
+    }
+
+    &.-shape {
+        $shape-ratio: #{(330 / 3500 * 100vw)}; // height / width * 100%
+
+        min-height: $shape-ratio;
+
+        background: {
+            image: url(./../static/svg/brand-shape-red.not-inline.svg),
+                linear-gradient($color-red calc(100% - #{$shape-ratio} + 2px), transparent 0);
+            position: bottom center;
+            repeat: no-repeat;
+            size: 101%;
+        }
+    }
+}

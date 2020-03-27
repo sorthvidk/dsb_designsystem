@@ -3,6 +3,8 @@
  *
  * Funnel for forwarding the non-component sass to the components
  */
-@forward 'settings';
-@forward 'media-query';
 @forward 'font' as font-*;
+@forward 'grid';
+@forward 'media-query';
+@forward 'settings';
+@forward 'sizing';

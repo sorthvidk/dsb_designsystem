@@ -1,0 +1,13 @@
+@use './../../scss' as *;
+
+.grid {
+    @include grid;
+    
+    // todo: this is only for storybook
+    [class*="col"] {
+        border: 1px solid $color-blue;
+
+        padding: 10px 0;
+        text-align: center;
+    }
+}

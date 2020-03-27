@@ -18,7 +18,9 @@
 /**
  * Components
 */
+@forward './components/deck/deck';
 @forward './components/button/button';
+@forward './components/grid/grid';
 @forward './components/hero/hero';
-@forward './components/spinner/spinner';
+@forward './components/image/image';
 @forward './components/typography/typography';

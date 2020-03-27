@@ -8,4 +8,5 @@
 /**
  * Export configured mq-mixin
  */
+@forward 'breakpoints';
 @forward '../../../node_modules/sass-mq/mq';

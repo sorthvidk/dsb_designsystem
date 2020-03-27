@@ -110,7 +110,15 @@ module.exports = {
        *
        * Inline the SVG's into the code
        */
-      { test: /\.svg$/, loader: "svg-inline-loader" },
+      { test: /\.svg$/, exclude: /\.not-inline/, loader: "svg-inline-loader" },
+      {
+        test: /\.not-inline.svg$/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+          context: "src" // prevent display of src/ in filename
+        }
+      },
 
       /**
        * Images

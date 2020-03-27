@@ -1,4 +1,4 @@
-import { text } from "@storybook/addon-knobs";
+import { text, radios } from "@storybook/addon-knobs";
 
 // import "./hero.scss";
 import componentHTML from "./hero.html";
@@ -8,22 +8,21 @@ export default {
   title: "Components/Hero"
 };
 
-const config = ({modifier = '', button = ''} = {}) => ({
+const config = ({ bg, modifier = "", button = "" } = {}) => ({
+  bg,
   modifier,
-  headline: text("Headline", "Billige billetter til Hamburg"),
-  copy: text(
-    "Paragraph",
-    "Få det fulde overblik over den aktuelle togtrafik, uforudsete hændelser og planlagte sporarbejder i den kommende tid."
-  ),
+  headline: text("Headline"),
+  copy: text("Paragraph"),
   button: {
     modifier: button,
     text: text("Button text", "Se priser")
   },
-  image,
+  image
 });
 
-export const Default = () =>
-  componentHTML(config());
+export const Default = () => componentHTML(config({ button: "-ghost" }));
 
-export const Half = () =>
-  componentHTML(config({modifier: '-half', button: '-ghost'}));
+export const Full = () => componentHTML(config({ modifier: "-full" }));
+
+export const CSSBackground = () =>
+  componentHTML(config({ bg: true, modifier: radios("Modifier", {None: '', ['-full']: '-full'}, '') }));

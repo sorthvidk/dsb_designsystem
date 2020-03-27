@@ -1,7 +1,7 @@
 {
   "name": "dsb-designsystem",
   "version": "1.0.0",
-  "description": "Webpack 4 Boilerplate",
+  "description": "DSB Designsystem",
   "main": "./dist/main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
@@ -11,13 +11,10 @@
     "plop": "plop"
   },
   "keywords": [
-    "webpack",
-    "webpack 4",
-    "webpack boilerplate",
-    "boilerplate",
-    "hmr"
+    "dsb",
+    "designsystem"
   ],
-  "author": "Tania Rascia <tania@taniarascia.com>",
+  "author": "DEPT",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",

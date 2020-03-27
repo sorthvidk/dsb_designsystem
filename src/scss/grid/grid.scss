@@ -1,0 +1,19 @@
+@use '../media-query'as *;
+@use 'settings'as *;
+
+@function cols($cols, $of: 24) {
+    @return #{100% / $of * $cols};
+}
+
+@mixin grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin width($cols: 1) {
+    width: cols($cols, $of: $col-count);
+}
+
+@mixin offset($cols: 1) {
+    margin-left: cols($cols, $of: $col-count);
+}

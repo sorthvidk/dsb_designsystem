@@ -1,4 +1,11 @@
 /**
+ * This file is NOT funneled through the font/index.scss,
+ * but imported directly by the src/index.scss.
+ *
+ * Because this file should only be imported once in the project.
+ */
+
+/**
  * Imports
  */
 @font-face {

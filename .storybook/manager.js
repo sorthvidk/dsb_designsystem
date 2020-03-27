@@ -23,7 +23,7 @@ addons.setConfig({
     /**
      * Brand title
      */
-    brandTitle: "DSB Designsystem",
+    brandTitle: "DSB Designsystem - Storybook",
     /**
      * Brand image
      * 
