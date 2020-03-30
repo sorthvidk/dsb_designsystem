@@ -6,6 +6,8 @@ import Text from "../typography/hero-p/hero-p.html";
 import Button from "../button/button.html";
 import Image from "../image/image.html";
 
+import img from "Images/dsb_hero.jpg";
+
 export default ({
   bg = false,
   modifier = "-full",
@@ -14,26 +16,24 @@ export default ({
   button = {
     text: "Se priser"
   },
-  image
+  image = img
 } = {}) => html`
-  <section class="hero ${modifier || ""}">
-    ${Deck({
-      modifier: `-shape`,
-      content: html`
-        <div class="hero__content">
-          ${Headline({ text: headline })}
-          ${Text({ text: copy })}
-          ${Button({ text: button.text, modifier: button.modifier })}
-        </div>
-        ${bg
-          ? html`
-              <div
-                class="hero__image"
-                style="background-image: url(${ image });"
-              ></div>
-            `
-          : Image({modifier: "hero__image", url: image})}
+  <section class="hero ${modifier}">
+    
+    ${Deck({ modifier: `-shape -short`, content: html`
+      
+      <div class="hero__content">
+        ${Headline({ text: headline })}
+        ${Text({ text: copy })}
+        ${Button({ text: button.text, modifier: button.modifier })}
+      </div>
+
+      ${bg
+        ? html`<div class="hero__image" style="background-image: url(${image});"></div>`
+        : Image({ modifier: "hero__image", url: image })}
       `
+
     })}
+
   </section>
 `;

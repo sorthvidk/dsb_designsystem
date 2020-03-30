@@ -1,8 +1,10 @@
 @use './../../scss'as *;
 
 .hero {
-    .deck__inner {
-        display: flex;
+    .deck {
+        &__inner {
+            display: flex;
+        }
     }
 
     .w {
@@ -12,19 +14,23 @@
 
     &__content {
         order: 1;
-        
+
+        @include mq($until: m) {
+            margin-top: 20px;
+        }
+
         @include mq($from: m) {
             @include horizontal($prop: padding, $cols: 1);
             order: 0;
-            
+
             position: relative;
             display: inline-block;
             z-index: 1;
-            
+
             max-width: 49%;
             padding-top: 150px;
             padding-bottom: 150px;
-            
+
             color: white;
         }
 
@@ -36,10 +42,10 @@
     &__image {
         order: 0;
         width: 100%;
-        
+
         // is image tag
         object-position: right;
-        
+
         // is css-background
         background-size: cover;
         background-position: right;

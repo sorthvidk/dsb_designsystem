@@ -1,13 +1,13 @@
 import { html } from "lit-html";
 
 export default ({
-  modifier,
+  modifier = "",
   width = "-one",
   content = "Default deck content"
 }) => html`
-  <div class="deck ${modifier || ""}">
+  <div class="deck ${modifier}">
     <div class="deck__inner">
-      <div class="w ${width || ""}">
+      <div class="w ${width}">
         ${content}
       </div>
     </div>

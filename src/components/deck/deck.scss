@@ -7,19 +7,18 @@
         max-width: $page;
         margin: 0 auto;
     }
-    
+
     .w {
         position: relative;
         width: 100%;
         height: 100%;
+        margin: 0 auto;
 
         &.-one {
-            @include horizontal($prop: margin, $cols: 1);
             width: cols(22);
         }
 
         &.-two {
-            @include horizontal($prop: margin, $cols: 2);
             width: cols(20);
         }
     }
@@ -33,16 +32,27 @@
     }
 
     &.-shape {
-        $shape-ratio: #{(330 / 3500 * 100vw)}; // height / width * 100%
+        $shape-aspect-ratio: #{(330 / 3500 * 100vw)}; // height / width * 100%
 
-        min-height: $shape-ratio;
+        min-height: $shape-aspect-ratio;
 
         background: {
             image: url(./../static/svg/brand-shape-red.not-inline.svg),
-                linear-gradient($color-red calc(100% - #{$shape-ratio} + 2px), transparent 0);
+            linear-gradient($color-red calc(100% - #{$shape-aspect-ratio} + 2px), transparent 0);
             position: bottom center;
             repeat: no-repeat;
-            size: 101%;
+            size: 101%; // 1% horizontal safety
+        }
+
+        // [fix this] - find better place for this
+        &.-short {
+            @include mq($until: m) {
+                background: {
+                    image: url(./../static/svg/brand-shape-red.not-inline.svg),
+                    linear-gradient($color-red calc(50% - #{$shape-aspect-ratio / 2} + 2px), transparent 0);
+                    position: center calc(50% - #{$shape-aspect-ratio} - 1px);
+                }
+            }
         }
     }
 }
